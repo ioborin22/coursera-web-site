@@ -43,6 +43,19 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+article img {
+    width: 45%;
+    margin-right: 10px;
+}
+
 form {
     display: flex;
     flex-direction: column;
