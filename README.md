@@ -11,12 +11,22 @@ This project is a simple travel recommendation website created as part of the Ja
 - **Navigation Bar**: Easy navigation between the Home, About Us, and Contact Us pages.
 - **Interactive Elements**: Images on the Home page open in a modal window with navigation controls for a better viewing experience.
 - **Form Validation**: The Contact Us form includes client-side validation to ensure that all fields are filled out correctly.
+- **Search Functionality**: A search bar on the Home page allows users to filter recommendations based on keywords.
+
+## Search Functionality
+
+The search bar on the home page allows users to filter recommendations based on the keywords entered. The valid keywords are "beach", "temple", and "country". The search is case-insensitive.
+
+- **Country Recommendations**: Displays if the keyword "country" is entered.
+- **Beach Recommendations**: Displays if the keyword "beach" is entered.
+- **Temple Recommendations**: Displays if the keyword "temple" is entered.
+- **No Results Found**: Displays if no matching recommendations are found.
 
 ## Technologies Used
 
 - **HTML5**: Structure of the website.
 - **CSS3**: Styling of the website.
-- **JavaScript**: Interactive functionality, including form validation and image modals.
+- **JavaScript**: Interactive functionality, including form validation, image modals, and search functionality.
 
 ## How to Use
 

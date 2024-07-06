@@ -17,8 +17,19 @@
     <header>
         <h1>Welcome to Travel Recommendations</h1>
         <p>Your guide to discovering the best travel destinations!</p>
+        <div class="search-container">
+            <div class="search-inner-container">
+                <input type="text" id="search-box" placeholder="Search...">
+            </div>
+            <div class="button-group">
+                <button onclick="search()">Search</button>
+                <button onclick="clearSearch()">Clear</button>
+            </div>
+            <p id="search-error" class="error"></p>
+        </div>
+        
     </header>
-    <section>
+    <section id="country-recommendations">
         <h2>Country Recommendations</h2>
         <article>
             <h3>Country of Thailand</h3>
@@ -33,7 +44,7 @@
             <p>Description of Mexico Country.</p>
         </article>
     </section>
-    <section>
+    <section id="beach-recommendations">
         <h2>Beach Recommendations</h2>
         <article>
             <h3>Beach of Thailand</h3>
@@ -48,7 +59,7 @@
             <p>Description of Mexico Beach.</p>
         </article>
     </section>
-    <section>
+    <section id="temple-recommendations">
         <h2>Temple Recommendations</h2>
         <article>
             <h3>Temple of Thailand</h3>
@@ -62,6 +73,10 @@
             <img src="images/temple-mx-2.webp" alt="Temple of Mexico 2" class="preview">
             <p>Description of Mexico Temple.</p>
         </article>
+    </section>
+    <section id="no-results" style="display: none;">
+        <h2>No Results Found</h2>
+        <p>Sorry, no recommendations match your search.</p>
     </section>
 
     <!-- modal -->

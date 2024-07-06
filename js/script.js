@@ -82,4 +82,56 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
+
+    // Search functionality
+    window.search = function() {
+        const query = document.getElementById('search-box').value.toLowerCase().trim();
+        const sections = document.querySelectorAll('section');
+        const searchError = document.getElementById('search-error');
+        let found = false;
+
+        searchError.textContent = '';
+
+        if (query === '') {
+            searchError.textContent = 'Please enter one of the following words: beach, temple, or country.';
+            searchError.style.display = 'block';
+            return;
+        }
+
+        // Hide all sections initially
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        if (query.includes('country')) {
+            document.getElementById('country-recommendations').style.display = 'block';
+            found = true;
+        }
+        if (query.includes('beach')) {
+            document.getElementById('beach-recommendations').style.display = 'block';
+            found = true;
+        }
+        if (query.includes('temple')) {
+            document.getElementById('temple-recommendations').style.display = 'block';
+            found = true;
+        }
+
+        if (!found) {
+            document.getElementById('no-results').style.display = 'block';
+        }
+    };
+
+    window.clearSearch = function() {
+        const sections = document.querySelectorAll('section');
+        document.getElementById('search-box').value = '';
+        document.getElementById('search-error').textContent = '';
+        document.getElementById('search-error').style.display = 'none';
+        document.getElementById('no-results').style.display = 'none';
+
+        sections.forEach(section => {
+            if (section.id !== 'no-results') {
+                section.style.display = 'block';
+            }
+        });
+    };
 });
